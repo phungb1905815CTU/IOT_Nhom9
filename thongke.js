@@ -32,7 +32,7 @@ window.addEventListener('load',async (event) => {
     table__tbody.innerHTML = `
         <tr>
             <th scope="row">1</th>
-            <td>Đồng hồ manjaz</td>
+            <td>Đồng hồ Charme </td>
             <td>${Count_ImportProduct_Sony}</td>
             <td>${Count_ExportProduct_Sony}</td>
             <td>${Number(Count_ImportProduct_Sony-Count_ExportProduct_Sony)}</td>
