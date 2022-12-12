@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("https://images.pexels.com/photos/1075189/pexels-photo-1075189.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1");
+    z-index: 100;
+    transition: .7s;
+    background-position: center;
+    background-origin: border-box;
+    object-fit: cover;
+    background-size: 100%;
+}
+
+.container-fluid {
+    display: none;
+  }
+
+/* Header */
+
+
+.header {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #02070844;
+    position: fixed;
+    z-index: 20;
+}
+
+#home  {
+  background-color: rgb(209, 17, 14);
+}
+
+#home:hover {
+  opacity: 0.8;
+}
+
+.logo {
+    margin: 5px 2em;
+    font-size: 18px;
+}
+
+.btn-group {
+    display: flex;
+    margin: 1.5em 2em;
+    justify-content: center;
+}
+
+.btn-group button {
+    padding: 8px 10px;
+    font-size: 18px;
+    margin: 0 0.5em;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    transition: .6s;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.btn-group:focus {
+  outline: none;
+}
+
+.btn-group button:hover {
+    cursor: pointer;
+    background: #031103;
+}
+
+.btn-group button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.btn-group button a:hover {
+  color: white;
+}
+
+/* wrapper */
+
+.wrapper {
+    max-width: 1080px;
+    margin: 35px auto;
+    padding: 0 20px;
+    height: 100%;
+    z-index: -1;
+}
+
+.wrapper .center-line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrapper .row {
+    display: flex;
+}
+
+.wrapper .row section::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.row section .icon {
+    position: absolute;
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: red;
+    top: 13px;
+}
+
+.row-1 section .icon {
+    right: -60px;
+}
+
+.row-2 section .icon {
+    left: -60px;
+}
+
+.row-3 section .icon {
+    right: -60px;
+}
+
+.row-4 section .icon {
+    left: -60px;
+}
+
+.row-1 section::before {
+    right: -7px;
+}
+
+.row-2 section::before {
+    left: -7px;
+}
+
+.row-3 section::before {
+    right: -7px;
+}
+
+.row-4 section::before {
+    left: -7px;
+}
+
+
+.wrapper .row-1 {
+    justify-content: flex-start;
+}
+
+.wrapper .row-2 {
+    justify-content: flex-end;
+}
+
+.wrapper .row-3 {
+    justify-content: flex-start;
+}
+
+.wrapper .row-4 {
+    justify-content: flex-end;
+}
+
+.wrapper .row section {
+    background: #fff;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+
+.row section .details,
+.row section .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row section .details .title {
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.row section p {
+    margin: 0.8em 0;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+
+/* Loading */
+
+.center {
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 200;
+    overflow: hidden;
+    transition: 1.5s;
+}
+
+.outer {
+height: 200px;
+width: 200px;
+background: linear-gradient(135deg, #ffed07 0%, #fe6a50, #ed00aa 50%, #8900FF 100%);
+border-radius: 50%;
+animation: rotate 2s ease infinite;
+}
+
+@keyframes rotate {
+to {
+    transform: rotate(360deg);
+}
+}
+
+.inner {
+position: absolute;
+width: 190px;
+height: 190px;
+text-align: center;
+line-height: 190px;
+border-radius: 50%;
+background: #ff7979;
+}
+
+.inner span {
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffed07 0%, #fe6a50, #ed00aa 50%, #8900FF 100%);
+    color: black;
+    -webkit-background-clip: text;
+    background-size: 300%;
+}
+
+/* Scroll */
+body::-webkit-scrollbar { 
+width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+width: 0;
+}
+
+body::-webkit-scrollbar-track {
+width: 0;
+}
